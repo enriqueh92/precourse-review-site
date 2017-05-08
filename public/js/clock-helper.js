@@ -1,3 +1,10 @@
+const clock = {
+  getHours: function () { new Date.getHours()},
+  getMinutes: function () { new Date.getMinutes()},
+  getSeconds: function () { new Date.getSeconds()}
+};
+
+
 const padZero = (value) => {
   value = String(value);
   if (value.length === 1) {
@@ -17,3 +24,6 @@ setInterval(() => {
     document.querySelector('.clock .seconds').textContent = padZero(clock.getSeconds());
   }
 }, 1000);
+
+// I don't think I can do this yet.
+
